@@ -1,0 +1,6 @@
+opencv-python-headless
+cvu-python==0.0.2
+vidsz~=0.2.0
+
+numpy~=1.23.5
+opencv-python~=4.7.0.68
