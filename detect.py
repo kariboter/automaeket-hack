@@ -5,7 +5,6 @@ import numpy as np
 import cv2
 from cvu.detector.yolov5 import Yolov5 as Yolov5Onnx
 from vidsz.opencv import Reader, Writer
-from cvu.utils.google_utils import gdrive_download
 
 
 CLASSES = ["5 Arbuz", "Agusha", "Batonchik",  "ChocoBoy", "Cofe Monarch", "Confety Cocos",  "Fresh Bar", "Goroh Bonduelle",  "Jam Strawberry",  "Kuza Lakomkin","Lists Salat", "Machiatto", "Nuts", "Olives","Orbit", "Oreo", "Pechenie Belvita",  "Pechenie Imbir",  "Pivo", "Pure Heinz", "Salat", "Shampoo", "Sochnik","Sosiski", "Sugar", "Tess", "Xleb"]
@@ -93,7 +92,4 @@ if __name__ == "__main__":
 
     # video file
     else:
-        if not os.path.exists(opt.input) and opt.input == 'people.mp4':
-            gdrive_download("1rioaBCzP9S31DYVh-tHplQ3cgvgoBpNJ", "people.mp4")
-
         detect_video(opt.device, 'model/best_product.onnx', opt.input, opt.output)
