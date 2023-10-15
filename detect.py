@@ -67,19 +67,15 @@ def detect_image(device, weight, image_path, output_image):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights',
-                        type=str,
-                        default='model/best_product.onnx',
-                        help='onnx weights path')
 
     parser.add_argument('--input',
                         type=str,
-                        default='people.mp4',
+                        default='foo.mp4',
                         help='path to input video or image file')
 
     parser.add_argument('--output',
                         type=str,
-                        default='people_out.mp4',
+                        default='foo_out.jpg',
                         help='name of output video or image file')
 
     parser.add_argument('--device', type=str, default='cpu', help='cpu or gpu')
